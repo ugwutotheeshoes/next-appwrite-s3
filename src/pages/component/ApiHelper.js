@@ -1,6 +1,6 @@
-import { Client, Account } from "appwrite";
+import { Client, Storage } from "appwrite";
 const client = new Client();
-export const account = new Account(client);
+export const storage = new Storage(client);
 client
   .setEndpoint("http://localhost/v1") // Your API Endpoint
-  .setProject("OUR_PROJECT_ID"); // Your project ID
+  .setProject("64c9d67cd0ed8210066c"); // Your project ID

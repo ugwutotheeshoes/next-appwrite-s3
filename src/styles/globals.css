@@ -115,13 +115,28 @@ hr {
 
 img {
   object-fit: cover;
-  width: 25rem;
-  height: 25rem;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 20rem;
 }
 
 input {
   padding: 1rem;
   width: 20rem;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 8rem;
+}
+
+.article h2 {
+  font-size: 1.6rem;
+}
+
+.article-container p{
+  font-size: 1.1rem;
 }
 
 .section {

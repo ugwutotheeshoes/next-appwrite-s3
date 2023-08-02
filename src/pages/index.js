@@ -1,15 +1,10 @@
 import Link from "next/link";
 import "@appwrite.io/pink";
-import { useState } from "react";
-import { images } from "../pages/component/images";
-import Image from "next/image";
+import { storage } from "./component/ApiHelper";
 
 export default function Home() {
-  const ImageContainer = images.map((images) => (
-    <li key={images.id}>
-      <img src={images.img} alt="images" height={1000} width={1000} />
-    </li>
-  ));
+  const result = storage.getFilePreview("[BUCKET_ID]", "[FILE_ID]");
+  console.log(result); // Resource URL
   return (
     <main>
       <div>
@@ -21,7 +16,27 @@ export default function Home() {
             <Link href="/upload">UPLOAD AN IMAGE</Link>
           </button>
         </nav>
-        <ul className="collage">{ImageContainer}</ul>
+        <div className="article">
+          <img src={result} alt="images" />
+          <div className="article-container">
+            <h2 className="eyebrow-heading-1">The Pink Flamingo</h2>
+            <p>
+              Sunt et dolore labore est voluptate laborum nisi incididunt
+              officia qui esse ut. Magna anim ad aliqua sit tempor officia
+              consectetur. Occaecat aliquip voluptate enim do consectetur aliqua
+              cupidatat ad excepteur. Nulla nostrud sint deserunt duis aliqua
+              consectetur tempor aute officia. Consectetur irure reprehenderit
+              aute exercitation eu enim ad. Cillum sint mollit eu elit aute
+              laborum est et. Esse laboris voluptate irure ipsum officia eiusmod
+              ea fugiat. Nulla nostrud sint deserunt duis aliqua consectetur
+              tempor aute officia. Consectetur irure reprehenderit aute
+              exercitation eu enim ad. Duis nisi Lorem nulla velit exercitation
+              nisi reprehenderit ea incididunt. Commodo minim sint ipsum in
+              cupidatat amet enim velit ea. In laboris ut ad eu officia dolore
+              consectetur.
+            </p>
+          </div>
+        </div>
       </div>
     </main>
   );

@@ -3,7 +3,12 @@ import "@appwrite.io/pink";
 import { storage } from "./component/ApiHelper";
 
 export default function Home() {
-  const result = storage.getFilePreview("[BUCKET_ID]", "[FILE_ID]");
+  const result = storage.getFilePreview(
+    "[BUCKET_ID]",
+    "[FILE_ID]",
+    "[width]",
+    "[height]"
+  );
   console.log(result); // Resource URL
   return (
     <main>

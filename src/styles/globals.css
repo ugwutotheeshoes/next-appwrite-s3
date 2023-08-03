@@ -128,7 +128,7 @@ input {
 .article {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  margin: 8rem;
+  margin: 12rem 8rem 0 10rem;
 }
 
 .article h2 {
